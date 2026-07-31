@@ -1,7 +1,9 @@
 .git/**
 .gitignore
 .vscodeignore
+.claude/**
 scripts/**
 node_modules/**
+package-lock.json
 *.vsix
 __pycache__/**
