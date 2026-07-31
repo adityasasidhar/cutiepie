@@ -1,28 +1,25 @@
 <div align="center">
 
-<img src="logo.png" width="120" alt="Cutiepie">
+<img src="logo.png" width="112" alt="">
 
 # Cutiepie
 
 **A soft VS Code theme in powder pink and turquoise on true black.**
 
-Two accents, no noise. Pink carries structure — functions, classes, tags, JSON keys.
-Turquoise carries content — strings and the things you actually typed.
-Everything else stays out of the way.
+Two accents and nothing else. Pink carries structure — functions, classes, tags, keys.
+Turquoise carries content — strings. Everything else is greyscale.
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/adityasasidhar.cutiepie?color=F7B2C9&labelColor=0A0908&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=adityasasidhar.cutiepie)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/adityasasidhar.cutiepie?color=76E0D0&labelColor=0A0908&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=adityasasidhar.cutiepie)
-[![License](https://img.shields.io/badge/license-MIT-F7B2C9?labelColor=0A0908&style=flat-square)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-F7B2C9?labelColor=0A0908&style=flat-square)](LICENSE)
 
 </div>
 
 ---
 
-## Cutiepie Dark
+### Cutiepie Dark
 
 ![Cutiepie Dark](assets/preview-dark.png)
 
-## Cutiepie Light
+### Cutiepie Light
 
 ![Cutiepie Light](assets/preview-light.png)
 
@@ -30,28 +27,29 @@ Everything else stays out of the way.
 
 ## Install
 
-**From the Marketplace** — search `Cutiepie` in the Extensions panel, or:
+Search **Cutiepie** in the Extensions panel, or:
 
 ```
 ext install adityasasidhar.cutiepie
 ```
 
-Then <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>T</kbd> and pick **Cutiepie Dark** or **Cutiepie Light**.
+Then <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>T</kbd> → **Cutiepie Dark** or **Cutiepie Light**.
 
-**From source:**
+<details>
+<summary>Install from source</summary>
 
 ```bash
 git clone https://github.com/adityasasidhar/cutiepie.git
-cp -r cutiepie ~/.vscode/extensions/adityasasidhar.cutiepie-1.0.0
+cd cutiepie
+npm install && npx vsce package
+code --install-extension cutiepie-1.0.0.vsix
 ```
 
----
+</details>
 
 ## Palette
 
 ![Palette](assets/palette.png)
-
-The whole theme runs on two accents plus neutrals. Nothing warm, nothing muddy.
 
 | Role | Dark | Light |
 | --- | --- | --- |
@@ -61,62 +59,35 @@ The whole theme runs on two accents plus neutrals. Nothing warm, nothing muddy.
 | **Strings** — strings, interfaces, readonly props | `#76E0D0` | `#0E7C6B` |
 | Keywords, operators, parameters | `#AFACA7` | `#616161` |
 | Comments *(italic)* | `#9B808C` | `#8A6E7C` |
-| Added / success | `#4FC9B0` | `#0F9B84` |
+| Added | `#4FC9B0` | `#0F9B84` |
 | Deleted / error | `#FF6F85` | `#D32F52` |
 | Merge conflict | `#C9A0DC` | `#8E5AA8` |
 
-A few deliberate choices worth knowing about:
+Three choices worth explaining:
 
-- **Git and diff green is turquoise.** In a two-accent palette, turquoise already reads as
-  "good" — a separate green just added a third hue for no gain.
-- **Errors stay red, but rosy.** They're more saturated than the accent on purpose, so an
-  error never reads as decoration.
-- **Merge conflicts are lavender.** Once the warm tones were gone, orange had nowhere to sit.
-
----
-
-## Recommended settings
-
-The theme is tuned for a light editor chrome and generous line height:
-
-```jsonc
-{
-  "editor.fontFamily": "'Geist Mono', 'JetBrains Mono', monospace",
-  "editor.lineHeight": 1.6,
-  "editor.fontLigatures": true,
-  "workbench.colorTheme": "Cutiepie Dark"
-}
-```
-
----
+- **Git and diff green is turquoise.** In a two-accent palette turquoise already reads as
+  "good" — a separate green only added a third hue.
+- **Errors stay red, but rosy.** Deliberately more saturated than the accent, so an error
+  never reads as decoration.
+- **Merge conflicts are lavender.** With the warm tones gone, orange had nowhere to sit.
 
 ## Development
 
-Theme JSON in `themes/` is the source of truth. The images in `assets/` are generated
-from it, so they can never drift from what actually ships:
+The JSON in `themes/` is the source of truth. Everything in `assets/` is generated from it,
+so the screenshots can't drift from what ships:
 
 ```bash
 python3 scripts/render_previews.py     # assets/preview-{dark,light}.png
 python3 scripts/render_palette.py      # assets/palette.png
 ```
 
-Package and publish:
-
-```bash
-npm install
-npx vsce package                       # -> cutiepie-1.0.0.vsix
-npx vsce publish
-```
-
----
-
 ## Credits
 
 Built on [**Vesper**](https://github.com/raunofreiberg/vesper) by
-[Rauno Freiberg](https://github.com/raunofreiberg) — the scope structure and token
-architecture are his, and this theme would not exist without that groundwork. Thank you.
+[Rauno Freiberg](https://github.com/raunofreiberg). The scope structure and token
+architecture are his; this theme is a recolour of that groundwork. Thank you.
 
 ## License
 
 MIT © 2026 Aditya Sasidhar. Portions derived from Vesper, MIT © 2023 Rauno Freiberg —
-see [LICENSE](LICENSE) for the full notices.
+see [LICENSE](LICENSE) for both notices.
