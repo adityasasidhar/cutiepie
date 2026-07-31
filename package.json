@@ -1,0 +1,64 @@
+{
+  "name": "cutiepie",
+  "displayName": "Cutiepie",
+  "description": "A soft VS Code theme in powder pink and turquoise on true black. Dark and light.",
+  "version": "1.0.0",
+  "publisher": "adityasasidhar",
+  "license": "MIT",
+  "author": {
+    "name": "Aditya Sasidhar"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark theme",
+    "light theme",
+    "pink",
+    "powder pink",
+    "turquoise",
+    "pastel",
+    "minimal",
+    "color theme"
+  ],
+  "icon": "logo.png",
+  "galleryBanner": {
+    "color": "#0A0908",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adityasasidhar/cutiepie.git"
+  },
+  "homepage": "https://github.com/adityasasidhar/cutiepie#readme",
+  "bugs": {
+    "url": "https://github.com/adityasasidhar/cutiepie/issues"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Cutiepie Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cutiepie-dark-color-theme.json"
+      },
+      {
+        "label": "Cutiepie Light",
+        "uiTheme": "vs",
+        "path": "./themes/cutiepie-light-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "python3 scripts/build_themes.py",
+    "preview": "python3 scripts/render_previews.py dark && python3 scripts/render_previews.py light",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.0"
+  }
+}

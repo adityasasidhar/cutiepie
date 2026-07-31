@@ -1,0 +1,7 @@
+.git/**
+.gitignore
+.vscodeignore
+scripts/**
+node_modules/**
+*.vsix
+__pycache__/**
