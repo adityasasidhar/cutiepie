@@ -13,8 +13,6 @@ Turquoise carries content — strings. Everything else is greyscale.
 
 </div>
 
----
-
 ### Cutiepie Dark
 
 ![Cutiepie Dark](assets/preview-dark.png)
@@ -22,8 +20,6 @@ Turquoise carries content — strings. Everything else is greyscale.
 ### Cutiepie Light
 
 ![Cutiepie Light](assets/preview-light.png)
-
----
 
 ## Install
 
